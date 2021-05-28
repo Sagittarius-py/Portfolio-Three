@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Nav from "./Nav";
+import Home from "./Home.js";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
-import { red, amber } from "@material-ui/core/colors";
+import { red } from "@material-ui/core/colors";
 import "../styles/App.scss";
 
 class App extends Component {
@@ -9,7 +10,7 @@ class App extends Component {
     palette: {
       primary: red,
       secondary: {
-        main: amber[500],
+        main: "#eeeeee",
       },
       transparent: {},
     },
@@ -20,6 +21,7 @@ class App extends Component {
       <MuiThemeProvider theme={this.theme}>
         <div className="container">
           <Nav />
+          <Home />
         </div>
       </MuiThemeProvider>
     );

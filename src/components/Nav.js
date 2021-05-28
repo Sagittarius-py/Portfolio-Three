@@ -5,43 +5,84 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import "../styles/Nav.scss";
 
-const transparent = {
-  background: "rgba( 255, 255, 255, 0.15 )",
-  boxShadow: "0 8px 32px 0 rgba( 255, 255, 255, 0.20 )",
-  backdropFilter: "blur( 8.0px )",
-  WebkitBackdropFilter: "blur( 8.0px )",
-  borderRadius: "10px",
-  border: "1px solid rgba( 255, 255, 255, 0.18 )",
-  width: "200px",
-  height: "70px",
+const buttonStyle = {
+  height: "50px",
+  width: "50px",
+  borderRadius: "50%",
 };
 
+// {this.state.homeActive ? "large" : "small"}
+
 class Nav extends Component {
+  state = {
+    homeActive: true,
+    aboutActive: false,
+    projectsActive: false,
+    contactActive: false,
+  };
+  changeButton = () => {};
   render() {
     return (
       <nav className="navbar">
-        <ButtonGroup variant="contained" orientation="vertical">
+        <ButtonGroup orientation="vertical">
           <Button
-            variant="contained"
-            color="primary"
-            style={transparent}
+            variant="text"
+            color="secondary"
             size="large"
+            style={buttonStyle}
+            onClick={this.changeButton}
+            direction="up"
           >
             <ExpandLessIcon fontSize="large" />
           </Button>
           <Button
-            variant="contained"
-            color="primary"
-            style={transparent}
+            variant="text"
+            color="secondary"
+            style={buttonStyle}
             size="large"
           >
-            <FiberManualRecordIcon fontSize="medium" />
+            <FiberManualRecordIcon
+              fontSize={this.state.homeActive ? "large" : "small"}
+            />
+            <label>Home</label>
           </Button>
           <Button
-            variant="contained"
-            color="primary"
-            style={transparent}
+            variant="text"
+            color="secondary"
+            style={buttonStyle}
             size="large"
+          >
+            <FiberManualRecordIcon
+              fontSize={this.state.aboutActive ? "large" : "small"}
+            />
+          </Button>
+          <Button
+            variant="text"
+            color="secondary"
+            style={buttonStyle}
+            size="large"
+          >
+            <FiberManualRecordIcon
+              fontSize={this.state.projectsActive ? "large" : "small"}
+            />
+          </Button>
+          <Button
+            variant="text"
+            color="secondary"
+            style={buttonStyle}
+            size="large"
+          >
+            <FiberManualRecordIcon
+              fontSize={this.state.contactActive ? "large" : "small"}
+            />
+          </Button>
+          <Button
+            variant="text"
+            color="secondary"
+            style={buttonStyle}
+            size="large"
+            onClick={this.changeButton}
+            direction="down"
           >
             <ExpandMoreIcon fontSize="large" />
           </Button>
