@@ -50,7 +50,7 @@ export default function CustomizedTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
+          <Typography variant="body2" color="textSecondary" fontS ize="large">
             06.11.2018 r.
           </Typography>
         </TimelineOppositeContent>
