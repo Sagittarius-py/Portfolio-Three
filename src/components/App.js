@@ -28,8 +28,6 @@ class App extends Component {
     },
   });
 
-
-
   handleCallback = (childData) => {
     this.setState({ site: childData });
   };
@@ -37,6 +35,11 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={this.theme}>
+        {/* 
+        //! Dodaj animacje do pasków skilli
+      //* Dodaj animacje do pasków skilli
+      //? Dodaj animacje do pasków skilli 
+      */}
         <div className="container">
           <Nav
             parentCallback={this.handleCallback}
