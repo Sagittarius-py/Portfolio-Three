@@ -10,13 +10,14 @@ class Home extends Component {
         </div>
         {/* Content, pics and the rest... */}
         <h2 className="subtitle">Hello there!</h2>
+        <img src={profile} alt="profile pic"></img>
+
         <div className="opis">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas at ad
           sapiente perferendis aspernatur natus excepturi impedit perspiciatis
           sit, nobis earum porro molestiae velit, ipsa repellendus sequi
           corporis saepe amet.
         </div>
-        <img src={profile} alt="profile pic"></img>
       </div>
     );
   }

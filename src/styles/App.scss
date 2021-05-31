@@ -31,6 +31,9 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+.root {
+  z-index: 1;
+}
 
 //PC's
 
@@ -193,9 +196,10 @@
       grid-column-gap: 0px;
       grid-row-gap: 0px;
       img {
-        grid-area: 4 / 8 / 4 / 9;
+        grid-area: 4 / 7 / 4 / 8;
         width: 0vw;
         height: 0vw;
+        margin-left: 20px;
         opacity: 0.1;
         border-radius: 50%;
         position: absolute;
@@ -232,6 +236,15 @@
         font-size: 20pt;
       }
     }
+    div.About {
+      div.timeline {
+        top: 2vh;
+        right: 2vh;
+        height: 70vh;
+        width: 650px;
+        float: right;
+      }
+    }
   }
 }
 
@@ -245,12 +258,10 @@
     width: 100%;
     height: 100vh;
     background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-
     nav.navbar {
       width: 100%;
       position: absolute;
+      z-index: 5;
       bottom: 0;
       align-self: center;
       display: flex;
@@ -259,7 +270,135 @@
       box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(3.5px);
       -webkit-backdrop-filter: blur(3.5px);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.05);
+    }
+    div.content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 30px;
+
+      div.title {
+        // justify-self: center;
+        align-self: center;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        padding-left: 30px;
+        padding-right: 30px;
+
+        h1 {
+          font-size: 7vh;
+        }
+      }
+      h2.subtitle {
+        font-size: 0vh;
+        justify-self: flex-start;
+        align-self: flex-start;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        margin-left: 2vw;
+        border: solid 1px white;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        opacity: 0;
+
+        @keyframes textPopUp {
+          from {
+            font-size: 0vh;
+
+            opacity: 0;
+          }
+          to {
+            font-size: 5vh;
+
+            opacity: 1;
+          }
+        }
+        animation-name: textPopUp;
+        animation-duration: 1.5s;
+        animation-delay: 2s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+      }
+      img {
+        width: 0vw;
+        height: 0vw;
+        min-width: 0px;
+        min-height: 0px;
+        margin: 0 2vh 2vh 0;
+
+        border-radius: 50%;
+        justify-self: flex-end;
+        align-self: flex-end;
+        @keyframes imgPopUpMobile {
+          from {
+            width: 0vw;
+            height: 0vw;
+            min-width: 0px;
+            min-height: 0px;
+            opacity: 0.1;
+          }
+          to {
+            width: 20vw;
+            height: 20vw;
+            min-width: 150px;
+            min-height: 150px;
+            opacity: 1;
+          }
+        }
+        animation-name: imgPopUpMobile;
+        animation-duration: 1.5s;
+        animation-delay: 4s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+      }
+      .opis {
+        font-size: 0;
+        color: #111;
+        background: none;
+        box-shadow: none;
+        backdrop-filter: 0;
+        -webkit-backdrop-filter: 0;
+        border-radius: 0;
+        border: none;
+        padding: 10px;
+        margin: 1vmin;
+
+        @keyframes opisPopUpMobile {
+          from {
+            font-size: 0;
+            height: 0vw;
+
+            background: none;
+            box-shadow: none;
+            backdrop-filter: 0;
+            -webkit-backdrop-filter: 0;
+            border-radius: 0;
+            border: none;
+          }
+          to {
+            font-size: medium;
+            height: auto;
+
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+            backdrop-filter: blur(3.5px);
+            -webkit-backdrop-filter: blur(3.5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+          }
+        }
+        animation-name: opisPopUpMobile;
+        animation-duration: 3s;
+        animation-delay: 6s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+      }
     }
   }
 }
