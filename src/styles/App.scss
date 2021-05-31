@@ -240,12 +240,102 @@
       }
     }
     div.About {
+      background: none;
+      @media (max-width: 1390px) {
+        div.graph {
+          display: none;
+        }
+      }
+      div.graph {
+        width: 40vh;
+        height: 45vh;
+        margin-top: 30vh;
+        margin-left: 5vw;
+        float: left;
+        border-radius: 15px;
+
+        div.inGraph {
+          padding: 0px 20px 0 20px;
+          * {
+            box-sizing: border-box;
+          }
+          p {
+            font-size: 11pt;
+          }
+
+          .kontener {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            border-radius: 10px;
+            .skills {
+              text-align: right;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              color: white;
+              border-radius: 10px;
+            }
+            .html {
+              width: 98%;
+              background: rgb(255, 111, 0);
+              background: linear-gradient(
+                90deg,
+                rgba(255, 111, 0, 1) 9%,
+                rgba(255, 185, 64, 1) 100%
+              );
+              height: 20px;
+            }
+            .css {
+              width: 87%;
+              background: rgb(0, 91, 255);
+              background: linear-gradient(
+                90deg,
+                rgba(0, 91, 255, 1) 9%,
+                rgba(64, 203, 255, 1) 100%
+              );
+              height: 20px;
+            }
+            .js {
+              width: 65%;
+              background: rgb(255, 42, 42);
+              background: linear-gradient(
+                90deg,
+                rgba(255, 42, 42, 1) 9%,
+                rgba(255, 132, 132, 1) 100%
+              );
+              height: 20px;
+            }
+            .react {
+              width: 48%;
+              background: rgb(42, 150, 23);
+              background: linear-gradient(
+                90deg,
+                rgba(42, 150, 23, 1) 48%,
+                rgba(138, 255, 82, 1) 100%
+              );
+              height: 20px;
+            }
+            .sass {
+              width: 34%;
+              background: rgb(179, 0, 255);
+              background: linear-gradient(
+                90deg,
+                rgba(179, 0, 255, 1) 9%,
+                rgba(255, 64, 251, 1) 100%
+              );
+              height: 20px;
+            }
+          }
+        }
+      }
       div.timeline {
         top: 2vh;
         right: 2vh;
-        height: 70vh;
+        height: 100%;
         width: 650px;
         float: right;
+        // background-color: #444;
+        border-radius: 30px;
       }
     }
   }
@@ -253,6 +343,11 @@
 
 //Phone's
 @media (max-width: 1023px) {
+  @media (max-width: 1390px) {
+    div.graph {
+      display: none;
+    }
+  }
   div.container {
     margin: 0;
     padding: 0;
@@ -326,7 +421,7 @@
         }
         animation-name: textPopUp;
         animation-duration: 1.5s;
-        animation-delay: 2s;
+        animation-delay: 0.5s;
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
       }
@@ -357,14 +452,14 @@
           }
         }
         animation-name: imgPopUpMobile;
-        animation-duration: 1.5s;
-        animation-delay: 4s;
+        animation-duration: 1s;
+        animation-delay: 1s;
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
       }
       .opis {
         font-size: 0;
-        color: #111;
+        color: #eee;
         background: none;
         box-shadow: none;
         backdrop-filter: 0;
@@ -373,6 +468,7 @@
         border: none;
         padding: 10px;
         margin: 1vmin;
+        max-width: 60vw;
 
         @keyframes opisPopUpMobile {
           from {
@@ -387,7 +483,7 @@
             border: none;
           }
           to {
-            font-size: medium;
+            font-size: 16pt;
             height: auto;
 
             background: rgba(255, 255, 255, 0.25);
@@ -395,12 +491,12 @@
             backdrop-filter: blur(3.5px);
             -webkit-backdrop-filter: blur(3.5px);
             border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.35);
+            border: 2px solid rgba(255, 255, 255, 1);
           }
         }
         animation-name: opisPopUpMobile;
-        animation-duration: 3s;
-        animation-delay: 6s;
+        animation-duration: 2s;
+        animation-delay: 2s;
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
       }

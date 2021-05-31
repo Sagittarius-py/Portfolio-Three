@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CustomizedTimeline from "./about/Timeline";
+import Chart from "./about/Chart";
 
 export default class About extends Component {
   render() {
@@ -7,6 +8,9 @@ export default class About extends Component {
       <div className="About content">
         <div className="title aboutTitle">
           <h1 id="titleLabel">About Me</h1>
+        </div>
+        <div className="graph">
+          <Chart />
         </div>
         <div className="timeline">
           <CustomizedTimeline />
