@@ -38,7 +38,7 @@
   div.container {
     margin: 0;
     padding: 0;
-    background-image: url("../images/workspace-1280538.jpg");
+    background-image: url("../images/bg-desktop.jpg");
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -135,3 +135,30 @@
 }
 
 //Phone's
+@media (max-width: 1023px) {
+  div.container {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/bg-mobile.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+
+    nav.navbar {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(3.5px);
+      -webkit-backdrop-filter: blur(3.5px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  }
+}

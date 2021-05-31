@@ -12,7 +12,12 @@ import { red } from "@material-ui/core/colors";
 import "../styles/App.scss";
 
 class App extends Component {
-  state = { site: 1 };
+  state = {
+    site: 1,
+
+    width: null,
+    height: null,
+  };
   theme = createMuiTheme({
     palette: {
       primary: red,
@@ -22,6 +27,8 @@ class App extends Component {
       transparent: {},
     },
   });
+
+
 
   handleCallback = (childData) => {
     this.setState({ site: childData });
