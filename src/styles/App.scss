@@ -50,6 +50,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      z-index: 5;
     }
     div.content {
       //container position and size
@@ -120,12 +121,12 @@
             left: -20vw;
           }
           to {
-            left: 1vw;
+            left: -2.5em;
           }
         }
         top: 2vh;
         left: -20vw;
-        transform: translate(-2em, -2em) rotate(345deg);
+        transform: translate(-2.5em, -2em) rotate(345deg);
         animation-name: slideAboutTitle;
         animation-duration: 2.5s;
       }
