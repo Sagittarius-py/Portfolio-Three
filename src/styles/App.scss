@@ -46,6 +46,7 @@
     nav.navbar {
       height: 100vh;
       width: 10vw;
+      position: absolute;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -183,6 +184,52 @@
 
       h1#titleLabel {
         font-size: 50pt;
+      }
+    }
+    div.home {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      img {
+        grid-area: 4 / 8 / 4 / 9;
+        width: 0vw;
+        height: 0vw;
+        opacity: 0.1;
+        border-radius: 50%;
+        position: absolute;
+        @keyframes imgPopUp {
+          from {
+            width: 0vw;
+            height: 0vw;
+            opacity: 0.1;
+          }
+          to {
+            width: 20vw;
+            height: 20vw;
+            opacity: 1;
+          }
+        }
+        animation-name: imgPopUp;
+        animation-duration: 1.5s;
+        animation-delay: 3s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        place-self: center stretch;
+      }
+      h2.subtitle {
+        grid-area: 2 / 2 / 3 / 5;
+        font-size: 40pt;
+        border: 4px solid #eee;
+        justify-self: center;
+        padding: 20px;
+        border-radius: 20px;
+        color: #eee;
+      }
+      div.opis {
+        grid-area: 4 / 2 / 10 / 7;
+        font-size: 20pt;
       }
     }
   }

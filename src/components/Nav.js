@@ -122,7 +122,6 @@ class Nav extends Component {
               <FiberManualRecordIcon
                 fontSize={this.state.homeActive ? "large" : "small"}
               />
-              <label>{this.state.homeActive ? "Home" : null}</label>
             </Button>
 
             {/*Przycisk do home ^^^  */}
@@ -136,7 +135,6 @@ class Nav extends Component {
               <FiberManualRecordIcon
                 fontSize={this.state.aboutActive ? "large" : "small"}
               />
-              {this.state.aboutActive ? "About" : null}
             </Button>
 
             {/*Przycisk do about ^^^  */}
@@ -150,7 +148,6 @@ class Nav extends Component {
               <FiberManualRecordIcon
                 fontSize={this.state.projectsActive ? "large" : "small"}
               />
-              {this.state.projectsActive ? "Projects" : null}
             </Button>
 
             {/*Przycisk do projects ^^^  */}
@@ -164,7 +161,6 @@ class Nav extends Component {
               <FiberManualRecordIcon
                 fontSize={this.state.contactActive ? "large" : "small"}
               />
-              {this.state.contactActive ? "Contact" : null}
             </Button>
 
             {/*Przycisk do contact ^^^  */}
