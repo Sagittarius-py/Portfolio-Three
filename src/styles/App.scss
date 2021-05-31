@@ -52,34 +52,49 @@
       justify-content: center;
     }
     div.content {
+      //container position and size
       position: absolute;
       right: 30vw;
       bottom: 10vh;
       width: 80vw;
       height: 80vh;
+
+      //container look
       background: rgba(255, 255, 255, 0.1);
       box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(3.5px);
       -webkit-backdrop-filter: blur(3.5px);
       border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.05);
+
+      //animation
       animation-name: contentAnimation;
       animation-duration: 1.5s;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
       div.title {
+        //container position and size
         position: absolute;
         width: 30vw;
         height: 20vh;
+
+        //container look
         background: rgba(255, 255, 255, 0.75);
         box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
         backdrop-filter: blur(3.5px);
         -webkit-backdrop-filter: blur(3.5px);
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
+
+        //content
         display: flex;
         align-items: center;
         justify-content: center;
+
+        //animation
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
         h1#titleLabel {
           font-size: 50pt;
         }
@@ -93,14 +108,26 @@
             right: 1vw;
           }
         }
-
         top: 2vh;
         right: -10vw;
         transform: translate(10em, -2em) rotate(15deg);
         animation-name: slideHomeTitle;
         animation-duration: 1.5s;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
+      }
+      div.aboutTitle {
+        @keyframes slideAboutTitle {
+          from {
+            left: -20vw;
+          }
+          to {
+            left: 1vw;
+          }
+        }
+        top: 2vh;
+        left: -20vw;
+        transform: translate(-2em, -2em) rotate(345deg);
+        animation-name: slideAboutTitle;
+        animation-duration: 2.5s;
       }
     }
   }
