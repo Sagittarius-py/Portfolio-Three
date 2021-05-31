@@ -99,7 +99,7 @@ class Nav extends Component {
     return (
       <nav className="navbar">
         {this.state.width > 1023 ? (
-          <ButtonGroup orientation="vertical">
+          <ButtonGroup key="desktop" orientation="vertical">
             <Button
               variant="text"
               color="secondary"
@@ -183,7 +183,7 @@ class Nav extends Component {
             {/*Przycisk na dół ^^^  */}
           </ButtonGroup>
         ) : (
-          <ButtonGroup orientation="horizontal">
+          <ButtonGroup key="mobile" orientation="horizontal">
             <Button
               variant="text"
               color="secondary"
