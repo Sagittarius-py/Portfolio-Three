@@ -121,7 +121,7 @@
             left: -20vw;
           }
           to {
-            left: -2.5em;
+            left: 2.5em;
           }
         }
         top: 2vh;
@@ -129,6 +129,60 @@
         transform: translate(-2.5em, -2em) rotate(345deg);
         animation-name: slideAboutTitle;
         animation-duration: 2.5s;
+      }
+      div.contactTitle {
+        @keyframes slideContactTitle {
+          from {
+            top: -20vh;
+          }
+          to {
+            top: -1vh;
+            left: 2em;
+          }
+        }
+        top: -20vh;
+        transform: translate(-2.5em, 2em) rotate(-25deg);
+        animation-name: slideContactTitle;
+        animation-duration: 1.5s;
+      }
+    }
+    div.projectsTitle {
+      @keyframes slideProjectsTitle {
+        from {
+          right: -20vw;
+        }
+        to {
+          right: 2.5em;
+        }
+      }
+      top: 10vh;
+      right: -20vw;
+      transform: translate(0em, -2em);
+      animation-name: slideProjectsTitle;
+      animation-duration: 1.5s;
+      position: absolute;
+      width: 30vw;
+      height: 20vh;
+
+      //container look
+      background: rgba(255, 255, 255, 0.75);
+      box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+      backdrop-filter: blur(3.5px);
+      -webkit-backdrop-filter: blur(3.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
+      //content
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      //animation
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+
+      h1#titleLabel {
+        font-size: 50pt;
       }
     }
   }
