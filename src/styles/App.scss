@@ -1,5 +1,10 @@
-@keyframes example {
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap");
+
+// Animation
+@keyframes contentAnimation {
   from {
+    right: 30vw;
     opacity: 0;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
@@ -9,7 +14,8 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
   }
   to {
-    bottom: 10vh;
+    right: 10vw;
+
     opacity: 1;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
@@ -19,6 +25,14 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
 }
+
+//Master
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+//PC's
 
 @media (min-width: 1024px) {
   div.container {
@@ -39,7 +53,7 @@
     }
     div.content {
       position: absolute;
-      right: 10vw;
+      right: 30vw;
       bottom: 10vh;
       width: 80vw;
       height: 80vh;
@@ -49,10 +63,47 @@
       -webkit-backdrop-filter: blur(3.5px);
       border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.05);
-      animation-name: example;
+      animation-name: contentAnimation;
       animation-duration: 1.5s;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
+      div.title {
+        position: absolute;
+        width: 30vw;
+        height: 20vh;
+        background: rgba(255, 255, 255, 0.75);
+        box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1#titleLabel {
+          font-size: 50pt;
+        }
+      }
+      div.homeTitle {
+        @keyframes slideHomeTitle {
+          from {
+            right: -10vw;
+          }
+          to {
+            right: 1vw;
+          }
+        }
+
+        top: 2vh;
+        right: -10vw;
+        transform: translate(10em, -2em) rotate(15deg);
+        animation-name: slideHomeTitle;
+        animation-duration: 1.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+      }
     }
   }
 }
+
+//Phone's
