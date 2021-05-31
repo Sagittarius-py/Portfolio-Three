@@ -9,8 +9,6 @@ import Contact from "./Contact.js";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 import { red } from "@material-ui/core/colors";
 //
-import ReactCSSTransitionGroup from "react-transition-group";
-//
 import "../styles/App.scss";
 
 class App extends Component {
