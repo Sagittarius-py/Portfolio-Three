@@ -276,7 +276,7 @@
               border-radius: 10px;
             }
             .html {
-              width: 98%;
+              width: 0%;
               background: rgb(255, 111, 0);
               background: linear-gradient(
                 90deg,
@@ -284,9 +284,23 @@
                 rgba(255, 185, 64, 1) 100%
               );
               height: 20px;
+
+              @keyframes HTMLslide {
+                from {
+                  width: 0%;
+                }
+                to {
+                  width: 98%;
+                }
+              }
+              animation-name: HTMLslide;
+              animation-duration: 1s;
+              animation-delay: 0.5s;
+              -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
             }
             .css {
-              width: 87%;
+              width: 0%;
               background: rgb(0, 91, 255);
               background: linear-gradient(
                 90deg,
@@ -294,9 +308,23 @@
                 rgba(64, 203, 255, 1) 100%
               );
               height: 20px;
+
+              @keyframes CSSslide {
+                from {
+                  width: 0%;
+                }
+                to {
+                  width: 87%;
+                }
+              }
+              animation-name: CSSslide;
+              animation-duration: 1s;
+              animation-delay: 1s;
+              -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
             }
             .js {
-              width: 65%;
+              width: 0%;
               background: rgb(255, 42, 42);
               background: linear-gradient(
                 90deg,
@@ -304,19 +332,47 @@
                 rgba(255, 132, 132, 1) 100%
               );
               height: 20px;
+
+              @keyframes JSslide {
+                from {
+                  width: 0%;
+                }
+                to {
+                  width: 65%;
+                }
+              }
+              animation-name: JSslide;
+              animation-duration: 1s;
+              animation-delay: 1.5s;
+              -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
             }
             .react {
-              width: 48%;
-              background: rgb(42, 150, 23);
+              width: 0%;
+              background: rgb(24, 160, 0);
               background: linear-gradient(
                 90deg,
-                rgba(42, 150, 23, 1) 48%,
-                rgba(138, 255, 82, 1) 100%
+                rgb(24, 170, 0) 48%,
+                rgb(81, 255, 0) 100%
               );
               height: 20px;
+
+              @keyframes REACTslide {
+                from {
+                  width: 0%;
+                }
+                to {
+                  width: 48%;
+                }
+              }
+              animation-name: REACTslide;
+              animation-duration: 1s;
+              animation-delay: 2s;
+              -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
             }
             .sass {
-              width: 34%;
+              width: 0%;
               background: rgb(179, 0, 255);
               background: linear-gradient(
                 90deg,
@@ -324,6 +380,20 @@
                 rgba(255, 64, 251, 1) 100%
               );
               height: 20px;
+
+              @keyframes SASSslide {
+                from {
+                  width: 0%;
+                }
+                to {
+                  width: 34%;
+                }
+              }
+              animation-name: SASSslide;
+              animation-duration: 1s;
+              animation-delay: 2.5s;
+              -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
             }
           }
         }
@@ -336,6 +406,27 @@
         float: right;
         // background-color: #444;
         border-radius: 30px;
+      }
+    }
+    .Contact {
+      .buttonContainer {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        .ButtonGroupContainer {
+          grid-area: 3 / 1 / 4 / 6;
+          .contactButton {
+            width: 10vw;
+            height: 10vw;
+            z-index: 100;
+            border-radius: 50%;
+            background: none;
+            border: none;
+            margin: 0 30px 0 30px;
+          }
+        }
       }
     }
   }
