@@ -95,7 +95,6 @@ class Nav extends Component {
   render() {
     window.addEventListener("resize", this.getWindowDimensions);
 
-    console.log(this.state.width);
     return (
       <nav className="navbar">
         {this.state.width > 1023 ? (

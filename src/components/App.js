@@ -7,7 +7,7 @@ import Projects from "./Projects.js";
 import Contact from "./Contact.js";
 //
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
-import { red } from "@material-ui/core/colors";
+import { grey } from "@material-ui/core/colors";
 //
 import "../styles/App.scss";
 
@@ -20,7 +20,9 @@ class App extends Component {
   };
   theme = createMuiTheme({
     palette: {
-      primary: red,
+      primary: {
+        main: "#222222",
+      },
       secondary: {
         main: "#eeeeee",
       },
@@ -28,18 +30,23 @@ class App extends Component {
     },
   });
 
+  getWindowDimensions = () => {
+    const { innerWidth: width, innerHeight: height } = window;
+    this.setState({
+      width: width,
+      height: height,
+    });
+  };
+
   handleCallback = (childData) => {
     this.setState({ site: childData });
   };
 
   render() {
+    window.addEventListener("resize", this.getWindowDimensions);
+
     return (
       <MuiThemeProvider theme={this.theme}>
-        {/* 
-        //! Dodaj animacje do pasków skilli
-      //* Dodaj animacje do pasków skilli
-      //? Dodaj animacje do pasków skilli 
-      */}
         <div className="container">
           <Nav
             parentCallback={this.handleCallback}
@@ -48,7 +55,7 @@ class App extends Component {
           {this.state.site === 1 ? <Home /> : null}
           {this.state.site === 2 ? <About /> : null}
           {this.state.site === 3 ? <Projects /> : null}
-          {this.state.site === 4 ? <Contact /> : null}
+          {this.state.site === 4 ? <Contact width={this.state.width} /> : null}
         </div>
       </MuiThemeProvider>
     );
