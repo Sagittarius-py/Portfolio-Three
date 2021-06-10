@@ -14,7 +14,6 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { createMuiTheme } from "@material-ui/core/styles";
 import grey from "@material-ui/core/colors/grey";
-import green from "@material-ui/core/colors/green";
 
 const theme = createMuiTheme({
   palette: {

@@ -420,9 +420,35 @@
             height: 10vw;
             z-index: 100;
             border-radius: 50%;
-            // background: none;
             border: none;
-            margin: 0 1vw 0 1vw;
+            margin: -50px 1vw 0 1vw;
+            opacity: 0;
+            @keyframes ContactButtonAnim {
+              from {
+                opacity: 0;
+                margin: -50px 1vw 0 1vw;
+              }
+              to {
+                opacity: 1;
+                margin: 0 1vw 0 1vw;
+              }
+            }
+            animation-name: ContactButtonAnim;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+          }
+          .hidden {
+            opacity: 0;
+          }
+          .mail,
+          .phone {
+            margin-top: 200px;
+            background-color: #222;
+            padding: 5px;
+            white-space: nowrap;
+            border-radius: 5px;
           }
         }
       }
