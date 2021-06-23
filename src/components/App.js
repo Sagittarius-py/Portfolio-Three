@@ -43,7 +43,7 @@ class App extends Component {
 
   render() {
     window.addEventListener("resize", this.getWindowDimensions);
-
+    // console.log(this.state.width);
     return (
       <MuiThemeProvider theme={this.theme}>
         <div className="container">
@@ -52,7 +52,7 @@ class App extends Component {
             onChange={this.handleCallback}
           />
           {this.state.site === 1 ? <Home /> : null}
-          {this.state.site === 2 ? <About /> : null}
+          {this.state.site === 2 ? <About width={this.state.width} /> : null}
           {this.state.site === 3 ? <Projects /> : null}
           {this.state.site === 4 ? <Contact width={this.state.width} /> : null}
         </div>
