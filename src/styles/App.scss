@@ -241,7 +241,7 @@
     }
     div.About {
       background: none;
-      @media (max-width: 1390px) {
+      @media (min-width: 1024px) and (max-width: 1367px) {
         div.graph {
           display: none;
         }
@@ -465,13 +465,8 @@
   }
 }
 
-//Phone's
-@media (max-width: 1023px) {
-  @media (max-width: 1390px) {
-    div.graph {
-      display: none;
-    }
-  }
+//No PC but not phone yet
+@media (min-width: 500px) and (max-width: 1023px) {
   div.container {
     margin: 0;
     padding: 0;
@@ -623,6 +618,162 @@
         animation-delay: 2s;
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
+      }
+    }
+    div.About {
+      background: none;
+
+      div.graph {
+        width: 40vh;
+        height: 45vh;
+        // margin-top: 30vh;
+        margin-left: 5vw;
+        float: left;
+        border-radius: 15px;
+
+        div.inGraph {
+          padding: 0px 20px 0 20px;
+          * {
+            box-sizing: border-box;
+          }
+          p {
+            font-size: 11pt;
+          }
+
+          .kontener {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            border-radius: 10px;
+            .skills {
+              text-align: right;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              color: white;
+              border-radius: 10px;
+            }
+            .html {
+              width: 0%;
+              background: rgb(255, 111, 0);
+              background: linear-gradient(
+                90deg,
+                rgba(255, 111, 0, 1) 9%,
+                rgba(255, 185, 64, 1) 100%
+              );
+              height: 20px;
+
+              @keyframes HTMLslide {
+                from {
+                  width: 0%;
+                }
+                to {
+                  width: 98%;
+                }
+              }
+              animation-name: HTMLslide;
+              animation-duration: 1s;
+              animation-delay: 0.5s;
+              -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+            }
+            .css {
+              width: 0%;
+              background: rgb(0, 91, 255);
+              background: linear-gradient(
+                90deg,
+                rgba(0, 91, 255, 1) 9%,
+                rgba(64, 203, 255, 1) 100%
+              );
+              height: 20px;
+
+              @keyframes CSSslide {
+                from {
+                  width: 0%;
+                }
+                to {
+                  width: 87%;
+                }
+              }
+              animation-name: CSSslide;
+              animation-duration: 1s;
+              animation-delay: 1s;
+              -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+            }
+            .js {
+              width: 0%;
+              background: rgb(255, 42, 42);
+              background: linear-gradient(
+                90deg,
+                rgba(255, 42, 42, 1) 9%,
+                rgba(255, 132, 132, 1) 100%
+              );
+              height: 20px;
+
+              @keyframes JSslide {
+                from {
+                  width: 0%;
+                }
+                to {
+                  width: 65%;
+                }
+              }
+              animation-name: JSslide;
+              animation-duration: 1s;
+              animation-delay: 1.5s;
+              -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+            }
+            .react {
+              width: 0%;
+              background: rgb(24, 160, 0);
+              background: linear-gradient(
+                90deg,
+                rgb(24, 170, 0) 48%,
+                rgb(81, 255, 0) 100%
+              );
+              height: 20px;
+
+              @keyframes REACTslide {
+                from {
+                  width: 0%;
+                }
+                to {
+                  width: 48%;
+                }
+              }
+              animation-name: REACTslide;
+              animation-duration: 1s;
+              animation-delay: 2s;
+              -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+            }
+            .sass {
+              width: 0%;
+              background: rgb(179, 0, 255);
+              background: linear-gradient(
+                90deg,
+                rgba(179, 0, 255, 1) 9%,
+                rgba(255, 64, 251, 1) 100%
+              );
+              height: 20px;
+
+              @keyframes SASSslide {
+                from {
+                  width: 0%;
+                }
+                to {
+                  width: 34%;
+                }
+              }
+              animation-name: SASSslide;
+              animation-duration: 1s;
+              animation-delay: 2.5s;
+              -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+            }
+          }
+        }
       }
     }
   }

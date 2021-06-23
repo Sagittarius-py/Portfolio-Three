@@ -42,6 +42,7 @@ class App extends Component {
   };
 
   render() {
+    window.addEventListener("load", this.getWindowDimensions);
     window.addEventListener("resize", this.getWindowDimensions);
     // console.log(this.state.width);
     return (

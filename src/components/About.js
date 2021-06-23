@@ -13,7 +13,7 @@ function About(props) {
         <Chart />
       </div>
       <div className="timeline">
-        {props.widht >= 500 ? <CustomizedTimeline /> : null}
+        {props.width >= 500 ? <CustomizedTimeline /> : <Chart />}
       </div>
     </div>
   );
