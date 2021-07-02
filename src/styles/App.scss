@@ -622,14 +622,20 @@
     }
     div.About {
       background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       div.graph {
         width: 40vh;
         height: 45vh;
-        // margin-top: 30vh;
         margin-left: 5vw;
         float: left;
         border-radius: 15px;
+        margin: 10vw 20vw 20vw 20vw;
+        padding: 0 0 8vh;
+        background: rgba(255, 255, 255, 0.7);
+        justify-content: center;
 
         div.inGraph {
           padding: 0px 20px 0 20px;
